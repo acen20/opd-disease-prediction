@@ -9,7 +9,7 @@ from .models import Features
 
 def home(request):
     #model = pickle.load(open('RBF.sav', 'rb'))
-    with open('../RBF.sav', 'rb') as f:
+    with open('RBF.sav', 'rb') as f:
         model = pickle.load(f)
 
     context = {
