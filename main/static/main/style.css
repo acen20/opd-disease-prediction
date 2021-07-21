@@ -9,23 +9,29 @@ nav{
 }
 
 .btn-symptom{
-  margin: 5px;
-  min-width: 50px;
+  /*margin: 5px;*/
+  width: 110px;
+  border-radius: 0px;
+}
+
+.symptoms-btns{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+}
+
+.symptoms-selection{
+  justify-content: center;
+}
+
+.search-area{
+  margin-bottom: 2%;
 }
 
 body{
   background: url('https://img.freepik.com/free-vector/dark-wavy-background-gradient_23-2148385755.jpg?size=626&ext=jpg') no-repeat;
   background-size: cover;
-}
-
-.main-text{
-
-}
-
-form{
-
-}
-body{
+  display: block;
   height: 100vh;
 }
 
@@ -40,4 +46,40 @@ body{
     width:50%;
     margin-left: 12%;
   }
+  .symptoms-btns{
+    justify-content:center;
+  }
+  .search-area{
+    margin-bottom: 2%;
+  }
+}
+
+.bg-texture{
+  background: url("images/carbon-fibre.png") repeat;
+  background-color: rgba(0,0,0,0.3);
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.arrow-down{
+  animation: 2s linear forwards;
+  cursor: pointer;
+  animation: bounce infinite; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+.position-absolute{
+  top:0;
+  right:0;
+}
+
+.close-btn{
+  background: rgba(0,0,0,0.7);
+  radius:20px;
+  overflow: visible;
+  cursor:pointer;
+  color:white;
+  font-size: 12px;
 }
