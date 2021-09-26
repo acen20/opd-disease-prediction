@@ -1,11 +1,24 @@
-{% extends 'base.html' %}
-
-{% block content %}
-<div class="d-none">
-  <form action="{% url 'Home' %}" method="post">
-    <div class = "symptoms-btns">
+{% extends 'base.html' %} {% block content %}
+<div class="">
+  {% if prediction %}
+  <div class="prediction">
+    {{prediction}}
+  </div>
+  {%endif%}
+  <form id="symptoms-form" action="{% url 'Home' %}" method="post">
+    <div class="symptoms-btns">
       {% for symptom in symptoms %}
-        <button class="btn btn-primary btn-sm btn-symptom" type="button" name="button">{{symptom.txt}}</button>
+      <div class="btn-symptom">
+        <input
+          name="{{forloop.counter0}}"
+          id="{{forloop.counter0}}"
+          value="0"
+          hidden
+        />
+        <div class="btn btn-sm">
+          {{symptom.txt}}
+        </div>
+      </div>
       {% endfor %}
     </div>
   </form>
