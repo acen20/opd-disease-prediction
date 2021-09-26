@@ -33,7 +33,6 @@ nav {
 }
 
 .submit-container {
-  position: fixed;
   bottom: 10px;
   margin: auto;
   text-align: center;
@@ -68,6 +67,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
+  height: 200px;
   max-height: 200px;
   overflow-y: scroll;
 }
